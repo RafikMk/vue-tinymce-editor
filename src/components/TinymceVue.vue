@@ -92,7 +92,8 @@
         },
         mounted(){
             this.content = this.value;
-            this.init();  
+            this.init(); 
+            alert("test") 
         },
         beforeDestroy () {
             this.editor.destroy();
