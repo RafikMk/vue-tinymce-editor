@@ -83,7 +83,7 @@
         },
         data(){
             return {
-                content : '',
+                content : 'This is a component for easy use of tinymce in vuejs.',
                 editor : null,
                 cTinyMce : null,
                 checkerTimeout: null,
@@ -94,7 +94,6 @@
             this.content = this.value;
             this.init(); 
             console.log("test") 
-            console.log(content)
         },
         beforeDestroy () {
             this.editor.destroy();
