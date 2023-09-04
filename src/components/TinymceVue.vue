@@ -80,7 +80,10 @@
                 toolbar2: { default : '', type: String },
                 other_options: { default : function() { return {}; }, type: Object},
                 readonly: { default: false, type: Boolean },
-                initialContent: "123", // Ajoutez cette prop
+                initialContent: {
+      type: String,
+      default: "100"
+    },
         },
         data(){
             return {
