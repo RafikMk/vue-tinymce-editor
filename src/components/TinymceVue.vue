@@ -123,7 +123,9 @@
                     toolbar1: this.toolbar1,
                     toolbar2: this.toolbar2,
                     plugins: this.plugins,
-                    init_instance_callback : this.initEditor
+                    init_instance_callback : this.initEditor,
+                    images_upload_base_path: '/images/', 
+
                 };
                 tinymce.init(this.concatAssciativeArrays(options, this.other_options));
             },
