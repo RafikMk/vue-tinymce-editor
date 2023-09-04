@@ -93,7 +93,8 @@
         mounted(){
             this.content = this.value;
             this.init(); 
-            alert("test") 
+            console.log("test") 
+            console.log(content)
         },
         beforeDestroy () {
             this.editor.destroy();
