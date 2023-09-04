@@ -118,15 +118,23 @@
         methods: {
             init(){
                 let options = {
-                    selector: '#' + this.id,
-                    skin: false,
-                    toolbar1: this.toolbar1,
-                    toolbar2: this.toolbar2,
-                    plugins: this.plugins,
-                    init_instance_callback : this.initEditor,
-                    images_upload_url: 'URL_DU_ENDPOINT_DE_TÉLÉCHARGEMENT', // Remplacez par votre URL
-
-                };
+      selector: '#' + this.id,
+      skin: false,
+      toolbar1: this.toolbar1,
+      toolbar2: this.toolbar2,
+      plugins: this.plugins,
+      init_instance_callback: this.initEditor,
+      content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }', // Style du contenu
+      // Configuration du téléchargement d'images
+      images_upload_url: 'URL_DU_ENDPOINT_DE_TÉLÉCHARGEMENT', // Remplacez par votre URL
+      images_upload_handler: function (blobInfo, success, failure) {
+        // Simulez un téléchargement réussi (remplacez par votre propre logique de téléchargement)
+        setTimeout(function () {
+          // Dans cet exemple, nous renvoyons simplement une URL d'image de démonstration
+          success('http://moxiecode.cachefly.net/tinymce/v9/images/logo.png');
+        }, 2000);
+      },
+    };
                 tinymce.init(this.concatAssciativeArrays(options, this.other_options));
             },
             initEditor(editor) {
