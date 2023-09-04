@@ -124,7 +124,7 @@
                     toolbar2: this.toolbar2,
                     plugins: this.plugins,
                     init_instance_callback : this.initEditor,
-                    images_upload_base_path: '/images/', 
+                    images_upload_url: 'URL_DU_ENDPOINT_DE_TÉLÉCHARGEMENT', // Remplacez par votre URL
 
                 };
                 tinymce.init(this.concatAssciativeArrays(options, this.other_options));
