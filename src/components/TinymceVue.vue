@@ -79,11 +79,12 @@
                 toolbar1: { default :'formatselect | bold italic  strikethrough  forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat', type: String},
                 toolbar2: { default : '', type: String },
                 other_options: { default : function() { return {}; }, type: Object},
-                readonly: { default: false, type: Boolean }
+                readonly: { default: false, type: Boolean },
+                initialContent: String, // Ajoutez cette prop
         },
         data(){
             return {
-                content : 'This is a component for easy use of tinymce in vuejs.',
+                content: this.initialContent, // Initialisez content avec initialContent 
                 editor : null,
                 cTinyMce : null,
                 checkerTimeout: null,
@@ -126,11 +127,11 @@
       init_instance_callback: this.initEditor,
       content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }', // Style du contenu
       // Configuration du téléchargement d'images
-      images_upload_handler: function (blobInfo, success, failure) {
+    /*  images_upload_handler: function (blobInfo, success, failure) {
   const blob = blobInfo.blob();
   const blobUrl = URL.createObjectURL(blob);
   success(blobUrl);
-},
+},*/
 
     };
                 tinymce.init(this.concatAssciativeArrays(options, this.other_options));
