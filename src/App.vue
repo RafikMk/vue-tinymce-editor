@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <h1>Test Npm Edit</h1>
+    <h1>Test Npm Edit rafik</h1>
     <tinymce id="d1" v-model="data"></tinymce>
     <button type="button" @click="clickHandler">Reset</button>
     <div>{{ data }}</div>
