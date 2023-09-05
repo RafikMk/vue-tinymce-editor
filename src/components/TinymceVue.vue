@@ -121,6 +121,7 @@
         },
         methods: {
             init(){
+                alert("hello ")
                 let options = {
       selector: '#' + this.id,
       skin: false,
