@@ -1,6 +1,6 @@
 <template>
   <div>
-      <textarea :id="id">{{ content }}</textarea>
+      <textarea disabled :id="id">{{ content }}</textarea>
   </div>
 </template>
 
