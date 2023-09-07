@@ -84,6 +84,7 @@
         },
         data(){
             return {
+                content: this.initialContent, // Initialisez content avec initialContent 
                 editor : null,
                 cTinyMce : null,
                 checkerTimeout: null,
